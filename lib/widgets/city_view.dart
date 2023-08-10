@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:weather_example/models/weather_forecast_daily.dart';
 import 'package:weather_example/utilities/forecast_util.dart';
 
-// Отображение города и даты
+// Отображение города, даты
 
 class CityView extends StatelessWidget {
   final AsyncSnapshot<WeatherForecast> snapshot;

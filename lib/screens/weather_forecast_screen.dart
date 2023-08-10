@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:weather_example/api/weather_api.dart';
 import 'package:weather_example/models/weather_forecast_daily.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:weather_example/widgets/bottum_list_view.dart';
 import 'package:weather_example/widgets/city_view.dart';
+import 'package:weather_example/widgets/detail_view.dart';
 import 'package:weather_example/widgets/temp_view.dart';
 
 class WeatherForecastScreen extends StatefulWidget {
@@ -23,9 +25,9 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
         WeatherApi().fetchWeatherForecastWithCity(cityName: _cityName);
 
     //? что небудь выведим
-  //   forecastObject.then((weather) {
-  //     print(weather.list![0].weather[0].main);
-  //   });
+    //   forecastObject.then((weather) {
+    //     print(weather.list![0].weather[0].main);
+    //   });
   }
 
   @override
@@ -62,8 +64,13 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
                     // вызываем созданный нами виджет TempView
                     const SizedBox(height: 50.0),
                     TempView(snapshot: snapshot),
-
-                  ],  
+                    const SizedBox(height: 50.0),
+                    // вызываем созданный нами виджет DetailView
+                    DetailView(snapshot: snapshot),
+                    const SizedBox(height: 50.0),
+                    // вызываем созданный нами виджет BottumListView
+                    BottumListView(snapshot: snapshot)
+                  ],
                 );
               } else {
                 return const Center(

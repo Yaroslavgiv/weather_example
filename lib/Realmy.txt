@@ -8,8 +8,18 @@
     - создаем папку widgets и файлик city_view
     - установим пакет intl для даты и времени
     - в папке utilities создаем файл forecast_util
-    - подключаем виджет CityView  к экрану
+    - подключаем виджет CityView  к экрану в WeatherForecastScreen
 5. Отображение температуры
     - Создаем файл temp_view в папке widgets
     - реализуем TempView 
     - подключаем виджет TempView к экрану
+6. Отображение силы ветра, давления и осадков
+    - создаем файл detail_view и класс DetailView
+    - подключаем библиотеку font_awesome_flutter для отображения нужной флновой иконки
+    - реализуем подгрузку давления в DetailView
+    - подключаем виджет DetailView к экрану в WeatherForecastScreen
+    - отобразим на экране
+    - реализуем осадки и силу ветра в DetailView
+7. Создаем файл bottum_list_view 
+    - создаем одноимённый класс
+    - подключаем виджет к экрану в WeatherForecastScreen
