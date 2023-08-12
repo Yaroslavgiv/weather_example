@@ -64,13 +64,8 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
                     // вызываем созданный нами виджет TempView
                     const SizedBox(height: 50.0),
                     TempView(snapshot: snapshot),
-                    const SizedBox(height: 50.0),
-                    // вызываем созданный нами виджет DetailView
-                    DetailView(snapshot: snapshot),
-                    const SizedBox(height: 50.0),
-                    // вызываем созданный нами виджет BottumListView
-                    BottumListView(snapshot: snapshot)
-                  ],
+
+                  ],  
                 );
               } else {
                 return const Center(
