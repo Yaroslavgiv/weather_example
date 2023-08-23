@@ -23,7 +23,7 @@ class TempView extends StatelessWidget {
         children: [
           Image.network(
             icon!,
-            color: Colors.brown,
+            // color: Colors.brown,
             scale: 0.4,
           ),
           const SizedBox(width: 20.0),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_example/widgets/forecast_card.dart';
 
 import '../models/weather_forecast_daily.dart';
 
@@ -29,13 +30,13 @@ class BottumListView extends StatelessWidget {
             // разделитель
             separatorBuilder: (context, index) => const SizedBox(width: 8),
             // размер списка
-            itemCount: snapshot.data!.list!.length,
+            itemCount: snapshot.data!.list.length,
             // содержание каждого элимента
             itemBuilder: (context, index) => Container(
               width: MediaQuery.of(context).size.width / 2.7,
               height: 160,
               color: Colors.brown,
-              child: const Text('eee'),
+              child: forecastCard(snapshot, index),
             ),
           ),
         ),

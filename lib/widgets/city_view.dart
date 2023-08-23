@@ -13,8 +13,8 @@ class CityView extends StatelessWidget {
   Widget build(BuildContext context) {
     var forecastList = snapshot.data?.list;
     // обращаемся к API
-    var city = snapshot.data?.city.name;
-    var country = snapshot.data?.city.country;
+    var city = snapshot.data!.city.name;
+    var country = snapshot.data!.city.country;
     //? получаем дату из JSON
     var formattedDate =
         DateTime.fromMillisecondsSinceEpoch(forecastList![0].dt * 1000);
@@ -23,7 +23,7 @@ class CityView extends StatelessWidget {
         children: [
           Text(
             '$city, $country',
-            style: const TextStyle(
+            style: const TextStyle( 
               fontWeight: FontWeight.bold,
               fontSize: 28.0,
               color: Colors.brown,
